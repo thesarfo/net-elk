@@ -28,6 +28,13 @@ public class ProductController : ControllerBase
                         d => d.Query('*' + keyword + '*')))
                 .Size(1000));
         
-        return Ok(results.Documents.ToList());
+        return Ok(results.Documents.ToList()); // deserialize it since a nested object is returned
+    }
+
+    [HttpPost(Name = "AddProduct")]
+    public async Task<IActionResult> Post(Product product)
+    {
+        await _elasticClient.IndexDocumentAsync(product);
+        return Ok();
     }
 }
