@@ -1,4 +1,5 @@
 using System.Reflection;
+using DotnetELK.Extensionss;
 using Serilog;
 using Serilog.Exceptions;
 using Serilog.Sinks.Elasticsearch;
@@ -14,6 +15,8 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddElasticSearch(builder.Configuration);
 
 var app = builder.Build();
 
