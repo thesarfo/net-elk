@@ -28,6 +28,8 @@ public class ProductController : ControllerBase
                         d => d.Query('*' + keyword + '*')))
                 .Size(1000));
         
+        _logger.LogInformation("Search results {@results}", results.Documents);
+        
         return Ok(results.Documents.ToList()); // deserialize it since a nested object is returned
     }
 
@@ -35,6 +37,8 @@ public class ProductController : ControllerBase
     public async Task<IActionResult> Post(Product product)
     {
         await _elasticClient.IndexDocumentAsync(product);
+        _logger.LogInformation("Product added {@product}", product);
+        
         return Ok();
     }
 }
