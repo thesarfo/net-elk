@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DotnetELK")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0209f2805ef796ea49a2cab033a161db935ce241")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+602870906b3ded87aed87333eea260ac086ab12b")]
 [assembly: System.Reflection.AssemblyProductAttribute("DotnetELK")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DotnetELK")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
